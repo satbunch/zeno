@@ -47,6 +47,74 @@ export class ZenModeSettingTab extends PluginSettingTab {
       );
 
     new Setting(containerEl)
+      .setName("Font size")
+      .setDesc("Font size while zen mode is active (px)")
+      .addText((text) =>
+        text
+          .setPlaceholder("18")
+          .setValue(String(this.plugin.settings.fontSize))
+          .onChange(async (value) => {
+            const num = parseFloat(value);
+            if (!isNaN(num) && num > 0) {
+              this.plugin.settings.fontSize = num;
+              await this.plugin.saveSettings();
+              this.plugin.zenMode.applySettings(this.plugin.settings);
+            }
+          })
+      );
+
+    new Setting(containerEl)
+      .setName("Line height")
+      .setDesc("Line height while zen mode is active (e.g. 1.8)")
+      .addText((text) =>
+        text
+          .setPlaceholder("1.8")
+          .setValue(String(this.plugin.settings.lineHeight))
+          .onChange(async (value) => {
+            const num = parseFloat(value);
+            if (!isNaN(num) && num > 0) {
+              this.plugin.settings.lineHeight = num;
+              await this.plugin.saveSettings();
+              this.plugin.zenMode.applySettings(this.plugin.settings);
+            }
+          })
+      );
+
+    new Setting(containerEl)
+      .setName("Paragraph spacing")
+      .setDesc("Space between paragraphs while zen mode is active (em)")
+      .addText((text) =>
+        text
+          .setPlaceholder("1.2")
+          .setValue(String(this.plugin.settings.paragraphSpacing))
+          .onChange(async (value) => {
+            const num = parseFloat(value);
+            if (!isNaN(num) && num >= 0) {
+              this.plugin.settings.paragraphSpacing = num;
+              await this.plugin.saveSettings();
+              this.plugin.zenMode.applySettings(this.plugin.settings);
+            }
+          })
+      );
+
+    new Setting(containerEl)
+      .setName("Letter spacing")
+      .setDesc("Letter spacing while zen mode is active (em, e.g. 0.02)")
+      .addText((text) =>
+        text
+          .setPlaceholder("0")
+          .setValue(String(this.plugin.settings.letterSpacing))
+          .onChange(async (value) => {
+            const num = parseFloat(value);
+            if (!isNaN(num)) {
+              this.plugin.settings.letterSpacing = num;
+              await this.plugin.saveSettings();
+              this.plugin.zenMode.applySettings(this.plugin.settings);
+            }
+          })
+      );
+
+    new Setting(containerEl)
       .setName("Hide status bar")
       .setDesc("Hide the status bar while zen mode is active")
       .addToggle((toggle) =>

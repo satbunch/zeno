@@ -37,6 +37,10 @@ Run it again to exit zen mode and restore all original settings.
 |---|---|---|
 | Zen mode font | `Georgia` | Font used while zen mode is active |
 | Content width | `900` | Text column width in pixels |
+| Font size | `18` | Font size in pixels |
+| Line height | `1.8` | Line height multiplier |
+| Paragraph spacing | `1.2` | Space between paragraphs (em) |
+| Letter spacing | `0` | Letter spacing (em) |
 | Hide status bar | `on` | Hides the bottom status bar |
 | Hide inline title | `on` | Hides the inline note title |
 | Hide properties | `on` | Hides frontmatter properties block |

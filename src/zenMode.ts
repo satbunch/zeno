@@ -119,7 +119,9 @@ export class ZenModeManager {
 
   private buildStyleText(settings: ZenModeSettings): string {
     const parts: string[] = [
-      `.zen-mode-active { --font-text: "${settings.font}"; --file-line-width: ${settings.contentWidth}px; }`,
+      `.zen-mode-active { --font-text: "${settings.font}"; --file-line-width: ${settings.contentWidth}px; --font-text-size: ${settings.fontSize}px; --line-height-normal: ${settings.lineHeight}; --letter-spacing-normal: ${settings.letterSpacing}em; }`,
+      `.zen-mode-active .cm-content, .zen-mode-active .markdown-preview-view { letter-spacing: ${settings.letterSpacing}em; }`,
+      `.zen-mode-active .markdown-preview-view p, .zen-mode-active .cm-line { margin-bottom: ${settings.paragraphSpacing}em; }`,
     ];
     if (settings.hideStatusBar) {
       parts.push(`.zen-mode-active .status-bar { display: none !important; }`);
