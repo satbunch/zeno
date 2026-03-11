@@ -17,10 +17,10 @@ export class ZenModeSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Zen mode font")
-      .setDesc("禅モード中に使用するフォント名")
+      .setDesc("Font to use while zen mode is active")
       .addText((text) =>
         text
-          .setPlaceholder("例: Georgia, Noto Serif JP")
+          .setPlaceholder("e.g. Georgia, Noto Serif JP")
           .setValue(this.plugin.settings.font)
           .onChange(async (value) => {
             this.plugin.settings.font = value;
@@ -31,7 +31,7 @@ export class ZenModeSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Content width")
-      .setDesc("禅モード中のコンテンツ幅 (px)")
+      .setDesc("Text column width while zen mode is active (px)")
       .addText((text) =>
         text
           .setPlaceholder("900")
@@ -48,7 +48,7 @@ export class ZenModeSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Hide status bar")
-      .setDesc("禅モード中にステータスバーを非表示にする")
+      .setDesc("Hide the status bar while zen mode is active")
       .addToggle((toggle) =>
         toggle
           .setValue(this.plugin.settings.hideStatusBar)
@@ -61,7 +61,7 @@ export class ZenModeSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Hide inline title")
-      .setDesc("禅モード中にインラインタイトルを非表示にする")
+      .setDesc("Hide the inline title while zen mode is active")
       .addToggle((toggle) =>
         toggle
           .setValue(this.plugin.settings.hideInlineTitle)
@@ -74,7 +74,7 @@ export class ZenModeSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Hide properties")
-      .setDesc("禅モード中にプロパティ（フロントマター）を非表示にする")
+      .setDesc("Hide the frontmatter properties block while zen mode is active")
       .addToggle((toggle) =>
         toggle
           .setValue(this.plugin.settings.hideProperties)
@@ -87,7 +87,7 @@ export class ZenModeSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Hide backlinks")
-      .setDesc("禅モード中にバックリンクパネルを非表示にする")
+      .setDesc("Hide the backlinks panel while zen mode is active")
       .addToggle((toggle) =>
         toggle
           .setValue(this.plugin.settings.hideBacklinks)
@@ -100,7 +100,7 @@ export class ZenModeSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Top padding")
-      .setDesc("禅モード中のコンテンツ上部の余白 (px)")
+      .setDesc("Top padding of the editor area while zen mode is active (px)")
       .addText((text) =>
         text
           .setPlaceholder("60")
@@ -117,7 +117,7 @@ export class ZenModeSettingTab extends PluginSettingTab {
 
     new Setting(containerEl)
       .setName("Bottom padding")
-      .setDesc("禅モード中のコンテンツ下部の余白 (px)")
+      .setDesc("Bottom padding of the editor area while zen mode is active (px)")
       .addText((text) =>
         text
           .setPlaceholder("60")
