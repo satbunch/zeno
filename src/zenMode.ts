@@ -132,6 +132,7 @@ export class ZenModeManager {
     }
     if (settings.hideBacklinks) {
       parts.push(`.zen-mode-active .backlink-pane { display: none !important; }`);
+      parts.push(`.zen-mode-active .embedded-backlinks { display: none !important; }`);
     }
     if (settings.paddingTop > 0 || settings.paddingBottom > 0) {
       parts.push(`.zen-mode-active .view-content { padding-top: ${settings.paddingTop}px !important; padding-bottom: ${settings.paddingBottom}px !important; }`);
