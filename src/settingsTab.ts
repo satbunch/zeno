@@ -233,22 +233,6 @@ export class ZenModeSettingTab extends PluginSettingTab {
       );
 
     new Setting(containerEl)
-      .setName("Fade-in duration")
-      .setDesc("Duration of the fade-in animation when zen mode activates (ms, 0 to disable)")
-      .addText((text) =>
-        text
-          .setPlaceholder("300")
-          .setValue(String(this.plugin.settings.fadeInDuration))
-          .onChange(async (value) => {
-            const num = parseInt(value, 10);
-            if (!isNaN(num) && num >= 0) {
-              this.plugin.settings.fadeInDuration = num;
-              await this.plugin.saveSettings();
-            }
-          })
-      );
-
-    new Setting(containerEl)
       .setName("Top padding")
       .setDesc("Top padding of the editor area while zen mode is active (px)")
       .addText((text) =>

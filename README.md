@@ -50,7 +50,6 @@ Run it again to exit zen mode and restore all original settings.
 | Hide backlinks | `on` | Hides the backlinks panel |
 | Hide header | `on` | Hides the note header bar |
 | Hide scrollbar | `on` | Hides the scrollbar |
-| Fade-in duration | `300` | Fade-in animation duration in ms (0 to disable) |
 | Top padding | `60` | Top padding of the editor area (px) |
 | Bottom padding | `60` | Bottom padding of the editor area (px) |
 
