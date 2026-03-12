@@ -1,7 +1,6 @@
 export interface ZenModeSettings {
   baseTheme: "moonstone" | "obsidian";
   cssTheme: string;
-  backgroundColor: string;
   font: string;
   contentWidth: number;
   hideStatusBar: boolean;
@@ -21,7 +20,6 @@ export interface ZenModeSettings {
 export const DEFAULT_SETTINGS: ZenModeSettings = {
   baseTheme: "moonstone",
   cssTheme: "",
-  backgroundColor: "#faf8ee",
   font: "Georgia",
   contentWidth: 900,
   hideStatusBar: true,

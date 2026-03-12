@@ -45,19 +45,6 @@ export class ZenModeSettingTab extends PluginSettingTab {
       );
 
     new Setting(containerEl)
-      .setName("Background color")
-      .setDesc("Background color while zen mode is active (hex, e.g. #faf8ee)")
-      .addColorPicker((picker) =>
-        picker
-          .setValue(this.plugin.settings.backgroundColor || "#faf8ee")
-          .onChange(async (value) => {
-            this.plugin.settings.backgroundColor = value;
-            await this.plugin.saveSettings();
-            this.plugin.zenMode.applySettings(this.plugin.settings);
-          })
-      );
-
-    new Setting(containerEl)
       .setName("Zen mode font")
       .setDesc("Font to use while zen mode is active")
       .addText((text) =>
