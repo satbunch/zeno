@@ -20,9 +20,9 @@ export class ZenModeSettingTab extends PluginSettingTab {
       .setDesc("Color scheme to use while zen mode is active")
       .addDropdown((drop) =>
         drop
-          .addOption("system", "System (follow OS setting)")
-          .addOption("moonstone", "Light (Moonstone)")
-          .addOption("obsidian", "Dark (Obsidian)")
+          .addOption("system", "System")
+          .addOption("moonstone", "Light")
+          .addOption("obsidian", "Dark")
           .setValue(this.plugin.settings.baseTheme)
           .onChange(async (value: string) => {
             this.plugin.settings.baseTheme = value as "moonstone" | "obsidian" | "system";
