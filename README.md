@@ -1,10 +1,10 @@
-# Zenora
+# Zeno
 
-Obsidian plugin that brings a distraction-free writing experience inspired by Typora.
+A flexible, customizable zen mode plugin for Obsidian. Tailor your distraction-free writing environment exactly to your preference.
 
 ## Features
 
-- **One-command toggle** — activate/deactivate zen mode via the Command Palette (`Toggle Zenora`)
+- **One-command toggle** — activate/deactivate zen mode via the Command Palette (`Toggle Zeno`)
 - **Clean writing environment** — switches to the light theme, collapses both sidebars, and enables readable line length
 - **Custom typography** — set your preferred font and content width
 - **Configurable UI hiding** — optionally hide the status bar, inline title, and frontmatter properties
@@ -16,18 +16,18 @@ Obsidian plugin that brings a distraction-free writing experience inspired by Ty
 ### From Obsidian Community Plugins (coming soon)
 
 1. Open **Settings → Community plugins**
-2. Search for **Zenora**
+2. Search for **Zeno**
 3. Install and enable
 
 ### Manual
 
 1. Download `main.js`, `styles.css`, and `manifest.json` from the [latest release](../../releases/latest)
-2. Copy them to `<your-vault>/.obsidian/plugins/zenora/`
+2. Copy them to `<your-vault>/.obsidian/plugins/zeno/`
 3. Enable the plugin in **Settings → Community plugins**
 
 ## Usage
 
-Open the Command Palette (`Cmd/Ctrl + P`) and run **Toggle Zenora**.
+Open the Command Palette (`Cmd/Ctrl + P`) and run **Toggle Zeno**.
 
 Run it again to exit zen mode and restore all original settings.
 

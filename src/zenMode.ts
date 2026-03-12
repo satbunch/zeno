@@ -95,7 +95,7 @@ export class ZenModeManager {
     try {
       await app.customCss.setTheme(settings.cssTheme);
     } catch {
-      new Notice("Zenora: Community theme not found, using default.");
+      new Notice("Zeno: Community theme not found, using default.");
     }
     vault.setConfig("theme", resolvedTheme);
     vault.setConfig("cssTheme", settings.cssTheme);
@@ -126,7 +126,7 @@ export class ZenModeManager {
     try {
       await app.customCss.setTheme(savedState.cssTheme);
     } catch {
-      new Notice("Zenora: Could not restore community theme.");
+      new Notice("Zeno: Could not restore community theme.");
     }
     vault.setConfig("theme", savedState.theme);
     vault.setConfig("cssTheme", savedState.cssTheme);
@@ -212,7 +212,7 @@ export class ZenModeManager {
     try {
       await app.customCss.setTheme(cssTheme);
     } catch {
-      new Notice("Zenora: Community theme not found, using default.");
+      new Notice("Zeno: Community theme not found, using default.");
     }
     app.vault.setConfig("theme", this.resolveBaseTheme(baseTheme));
     app.vault.setConfig("cssTheme", cssTheme);
@@ -235,7 +235,7 @@ export class ZenModeManager {
     try {
       await app.customCss.setTheme(this.savedState.cssTheme);
     } catch {
-      new Notice("Zenora: Could not restore community theme.");
+      new Notice("Zeno: Could not restore community theme.");
     }
     vault.setConfig("theme", this.savedState.theme);
     vault.setConfig("cssTheme", this.savedState.cssTheme);

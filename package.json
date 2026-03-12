@@ -1,7 +1,7 @@
 {
-	"name": "zenora",
+	"name": "zeno",
 	"version": "1.0.0",
-	"description": "Zen mode featuring Typora.",
+	"description": "Flexible, customizable zen mode for focused writing.",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {

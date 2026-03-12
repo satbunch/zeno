@@ -13,7 +13,7 @@ export class ZenModeSettingTab extends PluginSettingTab {
     const { containerEl } = this;
     containerEl.empty();
 
-    containerEl.createEl("h2", { text: "Zenora settings" });
+    containerEl.createEl("h2", { text: "Zeno settings" });
 
     new Setting(containerEl)
       .setName("Base theme")

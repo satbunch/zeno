@@ -25,14 +25,14 @@ export default class ZenModePlugin extends Plugin {
       });
     }
 
-    this.ribbonIcon = this.addRibbonIcon("eye", "Enable Zenora", async () => {
+    this.ribbonIcon = this.addRibbonIcon("eye", "Enable Zeno", async () => {
       await this.zenMode.toggle(this.settings);
       this.updateRibbonIcon();
     });
 
     this.addCommand({
       id: "toggle-zen-mode",
-      name: "Toggle Zenora",
+      name: "Toggle Zeno",
       callback: async () => {
         await this.zenMode.toggle(this.settings);
         this.updateRibbonIcon();
@@ -54,7 +54,7 @@ export default class ZenModePlugin extends Plugin {
   }
 
   private updateRibbonIcon() {
-    this.ribbonIcon.ariaLabel = this.zenMode.active ? "Disable Zenora" : "Enable Zenora";
+    this.ribbonIcon.ariaLabel = this.zenMode.active ? "Disable Zeno" : "Enable Zeno";
   }
 
   private async persistSavedState(state: SavedState | null): Promise<void> {
